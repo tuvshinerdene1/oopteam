@@ -1,8 +1,9 @@
-#include<Child.h>
-#include<Division.h>
-#include<JobDescription.h>
-#include<Spouse.h>
 #include<vector>
+#include"Child.h"
+#include "Division.h"
+#include "JobDescription.h"
+#include "Spouse.h"
+
 
 class Employee {
     public:
@@ -10,7 +11,7 @@ class Employee {
         Division* division;               // 1
         JobDescription* jobDescription;   // 1
         Spouse* spouse = nullptr;         // 0..1
-        vector<Child> children;           // 0..n
+        vector<Child> children;           // dynamic ugugliin butets ashiglaj baina. 0..n
      
         Employee(string name, Division* division, JobDescription* jobDescription)
             : name(name), division(division), jobDescription(jobDescription) {}
@@ -36,6 +37,7 @@ class Employee {
             if (children.empty()) {
                 cout << "  None" << endl;
             } else {
+                // needs to comment this for loop
                 for (auto& child : children) {
                     cout << "  " << child.name << ", age " << child.age << endl;
                 }
