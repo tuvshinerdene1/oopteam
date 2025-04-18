@@ -7,7 +7,7 @@ public:
 
 class Car {
 private:
-    Engine engine;  // Car owns Engine (composition)
+    Engine engine;  // car class engine objectiig buren ezemshine
 
 public:
     void startCar() {
@@ -19,3 +19,4 @@ int main() {
     Car car;
     car.startCar();
 }
+

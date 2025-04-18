@@ -23,5 +23,5 @@ int main() {
         folder.addFile(File());
     }
 
-    // folder.addFile(File()); // uncommenting this will throw
+    
 }
