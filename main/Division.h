@@ -9,4 +9,3 @@ class Division {
      
         Division(string name) : name(name) {}
     };
-     
