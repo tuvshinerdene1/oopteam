@@ -1,47 +1,45 @@
-#include<vector>
-#include"Child.h"
+#include <vector>
+#include "Child.h"
 #include "Division.h"
 #include "JobDescription.h"
 #include "Spouse.h"
 
+class Employee
+{
+private:
+    string CompanyID;
+    string Title;
+    Date StartDate;
 
-class Employee {
-    public:
-        string name;
-        Division* division;               // 1
-        JobDescription* jobDescription;   // 1
-        Spouse* spouse = nullptr;         // 0..1
-        vector<Child> children;           // dynamic ugugliin butets ashiglaj baina. 0..n
-     
-        Employee(string name, Division* division, JobDescription* jobDescription)
-            : name(name), division(division), jobDescription(jobDescription) {}
-     
-        void setSpouse(Spouse* s) {
-            spouse = s;
-        }
-     
-        void addChild(Child c) {
-            children.push_back(c);
-        }
-     
-        void print() {
-            cout << "Employee Name: " << name << endl;
-            cout << "Division: " << division->name << endl;
-            cout << "Job Title: " << jobDescription->title << endl;
-            if (spouse != nullptr) {
-                cout << "Spouse: " << spouse->name << endl;
-            } else {
-                cout << "Spouse: None" << endl;
-            }
-            cout << "Children: " << endl;
-            if (children.empty()) {
-                cout << "  None" << endl;
-            } else {
-                // needs to comment this for loop
-                for (auto& child : children) {
-                    cout << "  " << child.name << ", age " << child.age << endl;
-                }
-            }
-            cout << "------------------------" << endl;
-        }
-    };
+public:
+    Division *division;
+    JobDescription *jobDescription;
+    Spouse *spouse = nullptr; // 0..1
+    vector<Child> children;   // dynamic ugugliin butets ashiglaj baina. 0..n
+
+    Employee(string companyid = "default company" , string title = "default tiitle", Date StartDate){
+        this->CompanyID = companyid;
+        this->Title = title;
+        this->StartDate = StartDate;
+    }
+
+    string getCompanyID(){
+        return this->CompanyID;
+    }
+    string getTitle(){
+        return this->Title;
+    }
+    Date getStartDate(){
+        return this->StartDate;
+    }
+    
+    void setCompanyID(string id){
+        this->CompanyID = id;
+    }
+    void setTitle(string title){
+        this->Title = title;
+    }
+    void setStartDate(Date date){
+        this->StartDate = date;
+    }
+};

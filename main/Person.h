@@ -8,6 +8,11 @@ class Person{
         string SSNum;
         int Age;
     public:
+        Person(string Name = "Default name", string SSNUM = "Default ssnum", int age = 0){
+            this->Name = Name;
+            this->SSNum = SSNUM;
+            this->Age = age;
+        }
         string getName(){
             return this->Name;
         }
