@@ -57,20 +57,39 @@ int main()
     ch1.setAge(10);
     ch1.setSSNum("MN107");
 
-    Child ch2("playstatoin");
+    Child ch2("playstation");
     ch2.setName("Boldoo");
-    ch2.setAge(4);
-    ch2.setSSNum("MN108");
+    ch2.setAge(3);
+    ch2.setSSNum("MN109");
 
-    Child ch2("playstatoin");
-    ch2.setName("Boldoo");
-    ch2.setAge(4);
-    ch2.setSSNum("MN108");
+    Child ch3("xbox");
+    ch3.setName("Temujin");
+    ch3.setAge(6);
+    ch3.setSSNum("MN110");
 
-    Child ch2("playstatoin");
-    ch2.setName("Boldoo");
-    ch2.setAge(4);
-    ch2.setSSNum("MN108");
+    Child ch4("pc");
+    ch4.setName("Bayraa");
+    ch4.setAge(8);
+    ch4.setSSNum("MN111");
+
+    Child ch5("ankle bones");
+    ch5.setName("Dondog");
+    ch5.setAge(17);
+    ch5.setSSNum("MN112");
+
+    Child ch6("Dota");
+    ch6.setName("Tuvshintsetseg");
+    ch6.setAge(2);
+    ch6.setSSNum("MN113");
+
+    e1.setSpouse(sp1);
+    e2.setSpouse(sp2);
+    e3.setSpouse(sp3);
+
+    e1.addChild(ch1);e1.addChild(ch2);e1.addChild(ch3);
+    e2.addChild(ch4);
+    e3.addChild(ch5);e3.addChild(ch6);
+
 
     return 0;
 }
