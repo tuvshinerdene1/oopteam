@@ -41,4 +41,9 @@ public:
     {
         this->Age = age;
     }
+    void print(){
+        cout<<"Name: "<<this->Name<<endl;
+        cout<<"SSNum: "<<this->SSNum<<endl;
+        cout<<"Age: "<<this->Age<<endl;
+    }
 };
