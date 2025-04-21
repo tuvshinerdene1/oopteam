@@ -1,3 +1,6 @@
+#ifndef PERSON_H
+#define PERSON_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -29,15 +32,15 @@ public:
     {
         return this->Age;
     }
-    void setName(string name = "Default name")
+    void setName(string name)
     {
         this->Name = name;
     }
-    void setSSNum(string ssnum = "Default ssnum")
+    void setSSNum(string ssnum)
     {
         this->SSNum = ssnum;
     }
-    void setAge(int age = 0)
+    void setAge(int age)
     {
         this->Age = age;
     }
@@ -47,3 +50,5 @@ public:
         cout<<"Age: "<<this->Age<<endl;
     }
 };
+
+#endif

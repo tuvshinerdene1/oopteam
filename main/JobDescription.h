@@ -1,3 +1,6 @@
+#ifndef JOBDESCRIPTION_H
+#define JOBDESCRIPTION_H
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -20,3 +23,5 @@ public:
         this->Description = desc;
     }
 };
+
+#endif

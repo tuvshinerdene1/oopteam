@@ -1,3 +1,6 @@
+#ifndef SPOUSE_H
+#define SPOUSE_H
+
 #include <iostream>
 #include <string>
 #include "Person.h"
@@ -9,7 +12,7 @@ private:
     Date AnniversaryDate;
 
 public:
-    Spouse(int year = 2000, int month = 1, int day = 1)
+    Spouse(string name = "Default name", string ssnum = "Default ssnum", int age = 0,int year = 2000, int month = 1, int day = 1):Person(name,ssnum,age)
     {
         this->AnniversaryDate.setYear(year);
         this->AnniversaryDate.setMonth(month);
@@ -23,4 +26,11 @@ public:
     {
         this->AnniversaryDate = date;
     }
+    void print(){
+        Person::print();
+        cout<<"Anniversary date : "<<AnniversaryDate.getYear()<<"-"<<AnniversaryDate.getMonth()<<"-"
+        <<AnniversaryDate.getDay()<<endl;
+    }
 };
+
+#endif

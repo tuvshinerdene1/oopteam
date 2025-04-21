@@ -1,3 +1,5 @@
+#ifndef DIVISION_H
+#define DIVISION_H
 #include <iostream>
 #include <string>
 
@@ -22,3 +24,4 @@ public:
         this->DivisionName = name;
     }
 };
+#endif
