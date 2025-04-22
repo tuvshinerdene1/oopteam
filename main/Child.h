@@ -12,7 +12,7 @@ private:
     string FavouriteToy;
 
 public:
-    Child(string name = "Default name", string ssnum = "Default ssnum",int age = 0,string toy = "default toy"):Person(name,ssnum,age)
+    Child(string name = "Default name", string ssnum = "Default ssnum", int age = 0, string toy = "default toy") : Person(name, ssnum, age)
     {
         this->FavouriteToy = toy;
     }
@@ -24,9 +24,10 @@ public:
     {
         this->FavouriteToy = toy;
     }
-    void print(){
+    void print()
+    {
         Person::print();
-        cout<<"Favourite toy: "<<this->FavouriteToy<<endl;
+        cout << "Favourite toy: " << this->FavouriteToy << endl;
     }
 };
 

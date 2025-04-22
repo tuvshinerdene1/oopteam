@@ -21,7 +21,10 @@ private:
     vector<Child> children;                // dynamic ugugliin butets ashiglaj baina. 0..n
 
 public:
-    Employee(string name = "Default name", string ssnum = "Default ssnum", int age = 0, string companyid = "default company", string title = "default tiitle", int year=2000, int month=1, int day=1):Person(name,ssnum, age)
+    Employee(string name = "Default name", string ssnum = "Default ssnum", int age = 0, string companyid = "default company",
+             string title = "default tiitle",
+             int year = 2000, int month = 1, int day = 1)
+        : Person(name, ssnum, age)
     {
         this->CompanyID = companyid;
         this->Title = title;
@@ -56,20 +59,21 @@ public:
     {
         this->StartDate = date;
     }
-    
-    
+
     void setDivision(Division div)
     {
         this->division = div;
     }
-    Division getDivision(){
+    Division getDivision()
+    {
         return this->division;
     }
-    void setSpouse(Spouse* sp)
+    void setSpouse(Spouse *sp)
     {
         spouse = sp;
     }
-    Spouse* getSpouse(){
+    Spouse *getSpouse()
+    {
         return this->spouse;
     }
     void addJobDescription(JobDescription desc)
@@ -80,7 +84,8 @@ public:
     {
         this->jobDescription.pop_back();
     }
-    vector<JobDescription> getJobDescription(){
+    vector<JobDescription> getJobDescription()
+    {
         return this->jobDescription;
     }
     void addChild(Child child)
@@ -91,15 +96,17 @@ public:
     {
         this->children.pop_back();
     }
-    vector<Child> getChildren(){
+    vector<Child> getChildren()
+    {
         return this->children;
     }
 
-    void print(){
+    void print()
+    {
         Person::print();
-        cout<<"Company id : "<<this->CompanyID<<endl;
-        cout<<"Title : "<<this->Title<<endl;
-        cout<<"Start Date : "<<endl;
+        cout << "Company id : " << this->CompanyID << endl;
+        cout << "Title : " << this->Title << endl;
+        cout << "Start Date : " << endl;
         this->StartDate.print();
     }
 };
