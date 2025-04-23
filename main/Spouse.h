@@ -12,7 +12,8 @@ private:
     Date AnniversaryDate;
 
 public:
-    Spouse(string name = "Default name", string ssnum = "Default ssnum", int age = 0,int year = 2000, int month = 1, int day = 1):Person(name,ssnum,age)
+    Spouse(string name = "Default name", string ssnum = "Default ssnum", int age = 0,int year = 2000, int month = 1, int day = 1)
+    :Person(name,ssnum,age) // Person classiing baiguulagciig duudaj baina
     {
         this->AnniversaryDate.setYear(year);
         this->AnniversaryDate.setMonth(month);
@@ -32,5 +33,6 @@ public:
         <<AnniversaryDate.getDay()<<endl;
     }
 };
+
 
 #endif
